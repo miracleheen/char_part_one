@@ -28,7 +28,7 @@ void delete_all_sym(char* sentence, char sym, char* ptr_sym) {
 
 void add_sym(char* sentence, int num, char sym) {
 	if (num >= strlen(sentence) + 1 || num < 0) {
-		std::cout << "Ââåäåííîå Âàìè ÷èñëî íå ïîïàäàåò â äèàïàçîí 'sentence'\n";
+		std::cout << "ĞŸÑ€Ğ¸Ğ²ĞµÑ‚ 'sentence'\n";
 		return;
 	}
 
@@ -60,9 +60,9 @@ void amount_symbols(char* sentence) {
 		else amount_other_sym++;
 	}
 
-	std::cout << "Êîëè÷åñòâî áóêâ:[" << amount_letters << "]" << std::endl;
-	std::cout << "Êîëè÷åñòâî öèôğ:[" << amount_numbers << "]" << std::endl;
-	std::cout << "Êîëè÷åñòâî îñòàëüíûõ ñèìâîëîâ:[" << amount_other_sym << "]" << std::endl;
+	std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¡Ã³ÃªÃ¢:[" << amount_letters << "]" << std::endl;
+	std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¶Ã¨Ã´Ã°:[" << amount_numbers << "]" << std::endl;
+	std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã±Ã²Ã Ã«Ã¼Ã­Ã»Ãµ Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã®Ã¢:[" << amount_other_sym << "]" << std::endl;
 }
 
 
@@ -73,49 +73,49 @@ int main() {
 	char sym;
 
 	char sentence[] = "Life is a sum of all your choices.So,,what are you doing today?\n"
-		"Albert Camus(1913–1960)\n";
+		"Albert Camus(1913â€“1960)\n";
 
 	std::cout << sentence << '\n';
 	char* ptr_sym = sentence;
 
-	std::cout << "[1] Óäàëèòü èç ñòğîêè ñèìâîë ñ çàäàííûì íîìåğîì;" << '\n';
-	std::cout << "[2] Óäàëèòü èç ñòğîêè âñå âõîæäåíèÿ â íåå çàäàííîãî ñèìâîëà;" << '\n';
-	std::cout << "[3] Âñòàâèòü â ñòğîêó â óêàçàííóş ïîçèöèş çàäàííûé ñèìâîë;" << '\n';
-	std::cout << "[4] Çàìåíèòü âñå ñèìâîëû çàïÿòîé â ñòğîêå, íà ñèìâîëû âîñêëèöàòåëüíîãî çíàêà;" << '\n';
-	std::cout << "[5] Ïîñ÷èòàòü ñêîëüêî ğàç ââåäåíûé ñèìâîë âñòğå÷àåòñÿ â ñòğîê;" << '\n';
-	std::cout << "[6] Îïğåäåëèòü êîëè÷åñòâî áóêâ, êîëè÷åñòâî öèôğ è êîëè÷åñòâî îñòàëüíûõ ñèìâîëîâ, ïğèñóòñòâóşùèõ â ñòğîêå." << "\n\n";
-	std::cout << "Ââåäèòå íîìåğ ìåíş:";
+	std::cout << "[1] Ã“Ã¤Ã Ã«Ã¨Ã²Ã¼ Ã¨Ã§ Ã±Ã²Ã°Ã®ÃªÃ¨ Ã±Ã¨Ã¬Ã¢Ã®Ã« Ã± Ã§Ã Ã¤Ã Ã­Ã­Ã»Ã¬ Ã­Ã®Ã¬Ã¥Ã°Ã®Ã¬;" << '\n';
+	std::cout << "[2] Ã“Ã¤Ã Ã«Ã¨Ã²Ã¼ Ã¨Ã§ Ã±Ã²Ã°Ã®ÃªÃ¨ Ã¢Ã±Ã¥ Ã¢ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿ Ã¢ Ã­Ã¥Ã¥ Ã§Ã Ã¤Ã Ã­Ã­Ã®Ã£Ã® Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã ;" << '\n';
+	std::cout << "[3] Ã‚Ã±Ã²Ã Ã¢Ã¨Ã²Ã¼ Ã¢ Ã±Ã²Ã°Ã®ÃªÃ³ Ã¢ Ã³ÃªÃ Ã§Ã Ã­Ã­Ã³Ã¾ Ã¯Ã®Ã§Ã¨Ã¶Ã¨Ã¾ Ã§Ã Ã¤Ã Ã­Ã­Ã»Ã© Ã±Ã¨Ã¬Ã¢Ã®Ã«;" << '\n';
+	std::cout << "[4] Ã‡Ã Ã¬Ã¥Ã­Ã¨Ã²Ã¼ Ã¢Ã±Ã¥ Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã» Ã§Ã Ã¯Ã¿Ã²Ã®Ã© Ã¢ Ã±Ã²Ã°Ã®ÃªÃ¥, Ã­Ã  Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã» Ã¢Ã®Ã±ÃªÃ«Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã£Ã® Ã§Ã­Ã ÃªÃ ;" << '\n';
+	std::cout << "[5] ÃÃ®Ã±Ã·Ã¨Ã²Ã Ã²Ã¼ Ã±ÃªÃ®Ã«Ã¼ÃªÃ® Ã°Ã Ã§ Ã¢Ã¢Ã¥Ã¤Ã¥Ã­Ã»Ã© Ã±Ã¨Ã¬Ã¢Ã®Ã« Ã¢Ã±Ã²Ã°Ã¥Ã·Ã Ã¥Ã²Ã±Ã¿ Ã¢ Ã±Ã²Ã°Ã®Ãª;" << '\n';
+	std::cout << "[6] ÃÃ¯Ã°Ã¥Ã¤Ã¥Ã«Ã¨Ã²Ã¼ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¡Ã³ÃªÃ¢, ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¶Ã¨Ã´Ã° Ã¨ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã±Ã²Ã Ã«Ã¼Ã­Ã»Ãµ Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã®Ã¢, Ã¯Ã°Ã¨Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¾Ã¹Ã¨Ãµ Ã¢ Ã±Ã²Ã°Ã®ÃªÃ¥." << "\n\n";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã¬Ã¥Ã­Ã¾:";
 	std::cin >> choice;
 
 	switch (choice) {
-	case 1: std::cout << "Ââåäèòå íîìåğ ñèìâîëà: "; std::cin >> number; std::cout << '\n';
+	case 1: std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã : "; std::cin >> number; std::cout << '\n';
 		delete_sym(sentence, number, ptr_sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòğîêà: " << sentence << "\n\n";
+		std::cout << "ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã­Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ : " << sentence << "\n\n";
 		break;
 
-	case 2: std::cout << "Ââåäèòå ñèìâîë: "; std::cin >> sym;
+	case 2: std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã¨Ã¬Ã¢Ã®Ã«: "; std::cin >> sym;
 		delete_all_sym(sentence, sym, ptr_sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòğîêà: " << sentence << "\n\n";
+		std::cout << "ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã­Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ : " << sentence << "\n\n";
 		break;
 
-	case 3: std::cout << "Ââåäèòå ïîçèöèş äëÿ âñòàâêè: "; std::cin >> number;
-		std::cout << "Ââåäèòå ñèìâîë äëÿ äîáàâëåíèÿ â óêàçàííóş ïîçèöèş: "; std::cin >> sym; std::cout << '\n';
+	case 3: std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã®Ã§Ã¨Ã¶Ã¨Ã¾ Ã¤Ã«Ã¿ Ã¢Ã±Ã²Ã Ã¢ÃªÃ¨: "; std::cin >> number;
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã¨Ã¬Ã¢Ã®Ã« Ã¤Ã«Ã¿ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¿ Ã¢ Ã³ÃªÃ Ã§Ã Ã­Ã­Ã³Ã¾ Ã¯Ã®Ã§Ã¨Ã¶Ã¨Ã¾: "; std::cin >> sym; std::cout << '\n';
 		add_sym(sentence, number, sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòğîêà: " << sentence << "\n\n";
+		std::cout << "ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã­Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ : " << sentence << "\n\n";
 		break;
 
 	case 4: replace_sym(sentence); std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòğîêà: " << sentence << "\n\n";
+		std::cout << "ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã­Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ : " << sentence << "\n\n";
 		break;
 
-	case 5: std::cout << "Ââåäèòå ñèìâîë: "; std::cin >> sym; std::cout << std::endl;
-		std::cout << "Âñåãî ñèìâîëîâ '" << sym << "': " << count_sym(sentence, sym) << std::endl;
+	case 5: std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã¨Ã¬Ã¢Ã®Ã«: "; std::cin >> sym; std::cout << std::endl;
+		std::cout << "Ã‚Ã±Ã¥Ã£Ã® Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã®Ã¢ '" << sym << "': " << count_sym(sentence, sym) << std::endl;
 		break;
 
 	case 6: std::cout << std::endl; amount_symbols(sentence);
