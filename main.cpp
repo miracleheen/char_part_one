@@ -28,7 +28,7 @@ void delete_all_sym(char* sentence, char sym, char* ptr_sym) {
 
 void add_sym(char* sentence, int num, char sym) {
 	if (num >= strlen(sentence) + 1 || num < 0) {
-		std::cout << "Привет 'sentence'\n";
+		std::cout << "Введенное Вами число не попадает в диапазон 'sentence'\n";
 		return;
 	}
 
@@ -60,9 +60,9 @@ void amount_symbols(char* sentence) {
 		else amount_other_sym++;
 	}
 
-	std::cout << "Êîëè÷åñòâî áóêâ:[" << amount_letters << "]" << std::endl;
-	std::cout << "Êîëè÷åñòâî öèôð:[" << amount_numbers << "]" << std::endl;
-	std::cout << "Êîëè÷åñòâî îñòàëüíûõ ñèìâîëîâ:[" << amount_other_sym << "]" << std::endl;
+	std::cout << "Количество букв:[" << amount_letters << "]" << std::endl;
+	std::cout << "Количество цифр:[" << amount_numbers << "]" << std::endl;
+	std::cout << "Количество остальных символов:[" << amount_other_sym << "]" << std::endl;
 }
 
 
@@ -78,44 +78,44 @@ int main() {
 	std::cout << sentence << '\n';
 	char* ptr_sym = sentence;
 
-	std::cout << "[1] Óäàëèòü èç ñòðîêè ñèìâîë ñ çàäàííûì íîìåðîì;" << '\n';
-	std::cout << "[2] Óäàëèòü èç ñòðîêè âñå âõîæäåíèÿ â íåå çàäàííîãî ñèìâîëà;" << '\n';
-	std::cout << "[3] Âñòàâèòü â ñòðîêó â óêàçàííóþ ïîçèöèþ çàäàííûé ñèìâîë;" << '\n';
-	std::cout << "[4] Çàìåíèòü âñå ñèìâîëû çàïÿòîé â ñòðîêå, íà ñèìâîëû âîñêëèöàòåëüíîãî çíàêà;" << '\n';
-	std::cout << "[5] Ïîñ÷èòàòü ñêîëüêî ðàç ââåäåíûé ñèìâîë âñòðå÷àåòñÿ â ñòðîê;" << '\n';
-	std::cout << "[6] Îïðåäåëèòü êîëè÷åñòâî áóêâ, êîëè÷åñòâî öèôð è êîëè÷åñòâî îñòàëüíûõ ñèìâîëîâ, ïðèñóòñòâóþùèõ â ñòðîêå." << "\n\n";
-	std::cout << "Ââåäèòå íîìåð ìåíþ:";
+	std::cout << "[1] Удалить из строки символ с заданным номером;" << '\n';
+	std::cout << "[2] Удалить из строки все вхождения в нее заданного символа;" << '\n';
+	std::cout << "[3] Вставить в строку в указанную позицию заданный символ;" << '\n';
+	std::cout << "[4] Заменить все символы запятой в строке, на символы восклицательного знака;" << '\n';
+	std::cout << "[5] Посчитать сколько раз введеный символ встречается в строк;" << '\n';
+	std::cout << "[6] Определить количество букв, количество цифр и количество остальных символов, присутствующих в строке." << "\n\n";
+	std::cout << "Введите номер меню:";
 	std::cin >> choice;
 
 	switch (choice) {
-	case 1: std::cout << "Ââåäèòå íîìåð ñèìâîëà: "; std::cin >> number; std::cout << '\n';
+	case 1: std::cout << "Введите номер символа: "; std::cin >> number; std::cout << '\n';
 		delete_sym(sentence, number, ptr_sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòðîêà: " << sentence << "\n\n";
+		std::cout << "Измененная строка: " << sentence << "\n\n";
 		break;
 
-	case 2: std::cout << "Ââåäèòå ñèìâîë: "; std::cin >> sym;
+	case 2: std::cout << "Введите символ: "; std::cin >> sym;
 		delete_all_sym(sentence, sym, ptr_sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòðîêà: " << sentence << "\n\n";
+		std::cout << "Измененная строка: " << sentence << "\n\n";
 		break;
 
-	case 3: std::cout << "Ââåäèòå ïîçèöèþ äëÿ âñòàâêè: "; std::cin >> number;
-		std::cout << "Ââåäèòå ñèìâîë äëÿ äîáàâëåíèÿ â óêàçàííóþ ïîçèöèþ: "; std::cin >> sym; std::cout << '\n';
+	case 3: std::cout << "Введите позицию для вставки: "; std::cin >> number;
+		std::cout << "Введите символ для добавления в указанную позицию: "; std::cin >> sym; std::cout << '\n';
 		add_sym(sentence, number, sym);
 
 		std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòðîêà: " << sentence << "\n\n";
+		std::cout << "Измененная строка: " << sentence << "\n\n";
 		break;
 
 	case 4: replace_sym(sentence); std::cout << std::endl;
-		std::cout << "Èçìåíåííàÿ ñòðîêà: " << sentence << "\n\n";
+		std::cout << "Измененная строка: " << sentence << "\n\n";
 		break;
 
-	case 5: std::cout << "Ââåäèòå ñèìâîë: "; std::cin >> sym; std::cout << std::endl;
-		std::cout << "Âñåãî ñèìâîëîâ '" << sym << "': " << count_sym(sentence, sym) << std::endl;
+	case 5: std::cout << "Введите символ: "; std::cin >> sym; std::cout << std::endl;
+		std::cout << "Всего символов '" << sym << "': " << count_sym(sentence, sym) << std::endl;
 		break;
 
 	case 6: std::cout << std::endl; amount_symbols(sentence);
