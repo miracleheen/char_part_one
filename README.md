@@ -1,2 +1,2 @@
-## some_tusk_for_gitHub_
+## tusk_for_gitHub_
 ***Работа со строками#1***
